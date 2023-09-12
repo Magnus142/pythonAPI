@@ -1,8 +1,8 @@
 from googleapiclient.discovery import build
-my_api_key = "AIzaSyCuB3MAJ29XZUVSHgbhIVuNUzW_EQVRKrg"
+my_api_key = "AIzaSyCuB3MAJ29XZUVSHgbhIVuNUzW_EQVRKrg"      # variabler som gjør det letter og bruke google search api
 my_cse_id = "a5db8c49e25224ce3"
 
-fortsett = True
+fortsett = True         # setter variabler jeg bruker senere
 link = False
 snippet = False
 
@@ -19,12 +19,6 @@ def funkerdetint(string,min,max):   # gjør slik at man kun kan skrive inn kun e
         except:
             print("\n\n████ Skriv inn et heltall mellom",min,"og",max,"████")
     return testet
-
-
-
-
-
-
 
 
 def google_search(search_term, api_key, cse_id, **kwargs):
@@ -44,7 +38,7 @@ while fortsett:
     if link == False:
         print("1: Link til nettside     x")
     elif link == True:
-        print("1: Link til nettside     ✓")
+        print("1: Link til nettside     ✓")     # viser x om ett alternativ ikke er valgt og ✓ om det er valgt.
     if snippet == False:
         print("2: En snippet fra nettside   x")
     elif snippet == True:
@@ -56,7 +50,7 @@ while fortsett:
 
     if valg == 1:
         if link == False:
-            link = True
+            link = True     # logikk for hva som er valgt
         else:
             link = False
     elif valg == 2:
@@ -68,6 +62,6 @@ while fortsett:
         fortsett = False
         print("\n\n\n")
         if link == True:
-            print("Link: ",search_result["items"][0]["link"])
+            print("Link: ",search_result["items"][0]["link"])       # søker etter alternativene du har valgt
         if snippet == True:
             print("Snippet: ",search_result["items"][0]["snippet"])
