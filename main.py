@@ -27,7 +27,6 @@ def google_search(search_term, api_key, cse_id, **kwargs):
     return res
 
 
-
     # Main
 search = input("Hva ønsker du å søke på?: ")
 search_result = google_search(search, my_api_key, my_cse_id)
